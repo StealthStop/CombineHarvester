@@ -16,7 +16,7 @@ from CombineHarvester.CombineTools.combine.TaylorExpand import TaylorExpand
 
 ROOT.PyConfig.IgnoreCommandLineOptions = True
 ROOT.gROOT.SetBatch(ROOT.kTRUE)
-
+ROOT.v5.TFormula.SetMaxima(10000)
 
 def register_method(parser, method_dict, method_class):
     class_name = method_class.__name__

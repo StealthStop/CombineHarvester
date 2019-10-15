@@ -14,6 +14,7 @@
 namespace ch {
 
 CombineHarvester::CombineHarvester() : verbosity_(0), log_(&(std::cout)) {
+  ROOT::v5::TFormula::SetMaxima(10000);
   // if (verbosity_ >= 3) {
     // log() << "[CombineHarvester] Constructor called: " << this << "\n";
   // }
@@ -58,6 +59,7 @@ CombineHarvester::CombineHarvester(CombineHarvester const& other)
       post_lines_(other.post_lines_),
       verbosity_(other.verbosity_),
       log_(other.log_) {
+  ROOT::v5::TFormula::SetMaxima(10000);  
   // std::cout << "[CombineHarvester] Copy-constructor called " << &other
   //     << " -> " << this << "\n";
 }
